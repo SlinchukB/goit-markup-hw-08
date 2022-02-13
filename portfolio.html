@@ -23,14 +23,14 @@
                 <a class="link logo header__logo animate__animated animate__zoomIn animate__infinite	infinite" lang="en"
                     href="">Web<span class="logo-header">Studio</span></a>
                 <ul class="list site-list header__site-list">
-                    <li class="site-list__item"><a class="link site-list__link" href="index.html">Студия</a>
+                    <li class="site-list__item"><a class="link site-list__link carrent-page" href="index.html">Студия</a>
                     </li>
-                    <li class="site-list__item"><a class="link site-list__link carrent-page" href="portfolio.html">Портфолио</a>
+                    <li class="site-list__item"><a class="link site-list__link" href="portfolio.html">Портфолио</a>
                     </li>
                     <li class="site-list__item"><a class="link site-list__link" href="">Контакты</a></li>
                 </ul>
             </nav>
-            <ul class="list contacts">
+            <ul class="list contacts-list">
                 <li class="contacts__item"><a class="link site-list__link" href="mailto:info@devstudio.com"><svg
                             class="header-social-icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-email"></use>
@@ -40,7 +40,49 @@
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="menu-open-btn" data-menu-open>
+                <svg class="open-btn-icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-open-btn"></use>
+                </svg>
+            </button>
         </div>
+        <div class="mob-menu is-hidden" data-menu>
+            <div class="container mob-menu-top">
+                <button type="button" class="menu-close-btn" data-menu-close><svg class="model-icon" width="11" height="11">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg></button>
+                <ul class="list mob-list mob__site-list">
+                    <li class="mob-list__item"><a class="link mob-site-list__link " href="index.html">Студия</a></li>
+                    <li class="mob-list__item"><a class="link mob-site-list__link" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mob-list__item"><a class="link mob-site-list__link" href="">Контакты</a></li>
+                </ul>
+                <ul class="list mob-list mob-contacts">
+                    <li class="mob-list__item"><a class="link mob-contacts-list__link" href="tel:+380961111111">+38 096 111
+                            11 11</a>
+                    </li>
+                    <li class="mob-list__item"><a class="link mob-contacts-list__link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+            </div>
+            <div class="mob-menu-bottom">
+                <div class="container mob-social-container">
+                    <ul class="list mob-list mob-social-list">
+                        <li class="mob-social-list__item"><a class="link mob-social-site-list__link" href="" target="_blank"
+                                rel="noreferrer noopener">Instagram</a></li>
+                        <li class="mob-social-list__item"><a class="link mob-social-site-list__link" href="" target="_blank"
+                                rel="noreferrer noopener">Twitter</a>
+                        </li>
+                        <li class="mob-social-list__item"><a class="link mob-social-site-list__link" href="" target="_blank"
+                                rel="noreferrer noopener">Facebook</a></li>
+                        <li class="mob-social-list__item"><a class="link mob-social-site-list__link" href="" target="_blank"
+                                rel="noreferrer noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    
     </header>
     <main>
         <section class="portfolio section">

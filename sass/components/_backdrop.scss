@@ -14,12 +14,12 @@
 }
 
 .modal {
-  width: 90vw;
-  min-height: 90vw;
-  @media screen and (min-width: 480px) {
-    width: 450px;
-    min-height: 609px;
-  }
+  width: 100%;
+  max-width: 450px;
+  min-height: 609px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @media screen and (min-width: 1200px) {
     width: 528px;
     min-height: 581px;
@@ -30,7 +30,6 @@
     0px 1px 1px 0px var(--modal-box-shadow-color-2),
     0px 1px 3px 0px var(--modal-box-shadow-color-3);
   position: relative;
-  margin: 0 auto;
   transition: transform 500ms;
   padding: 40px;
   @media screen and (min-width: 1200px) {

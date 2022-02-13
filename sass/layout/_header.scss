@@ -144,23 +144,17 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
-  padding-top: 21px;
-  padding-bottom: 48px;
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  padding-top: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: transform 500ms, visibility 500ms;
 }
 
 .mob__site-list {
   color: var(--second-back-color);
-  padding-top: 48px;
-  position: absolute;
 }
 
 .mob-site-list__link {
@@ -189,6 +183,9 @@
 }
 
 .menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   margin-left: auto;
   display: block;
   border: none;
@@ -216,11 +213,9 @@
 
 .mob-social-list {
   display: flex;
-  // align-items: center;
-}
-
-.mob-list {
-  margin-left: 40px;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
 .mob-social-list__item:not(:last-child) {
@@ -233,4 +228,9 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.04em;
+}
+
+.mob-social-list__item {
+  margin-top: 10px;
+  margin-left: 10px;
 }
