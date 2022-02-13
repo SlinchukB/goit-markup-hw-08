@@ -1,0 +1,115 @@
+/** @format */
+
+.list-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 34px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.btm-item {
+  margin-bottom: 15px;
+}
+
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.main-btn {
+  font-family: inherit;
+  background-color: var(--third-back-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+  padding: 6px 22px;
+  background: var(--third-back-color);
+  border-radius: 4px;
+  border: none;
+  transition: background-color var(--transition), color var(--transition),
+    box-shadow var(--transition);
+  outline: none;
+}
+
+.main-btn:hover,
+.main-btn:focus,
+.carrent-btn {
+  color: var(--tittle-color);
+  background-color: var(--second-color);
+  box-shadow: 0px 3px 1px var(--main-btn-box-shadow-color-1),
+    0px 1px 2px var(--main-btn-box-shadow-color-2),
+    0px 2px 2px var(--team-box-shadow-color-1);
+}
+
+.project-item {
+  max-height: 404px;
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    max-height: 440px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    max-width: 370px;
+  }
+}
+
+.project-item-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-imege-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--project-imege-text-background-color);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--tittle-color);
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform var(--transition);
+  overflow: auto;
+}
+
+.project-link {
+  display: block;
+  transition: box-shadow var(--transition);
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px var(--header-drop-shadow-color);
+  }
+  &:hover .project-imege-text,
+  &:focus .project-imege-text {
+    transform: translateY(0);
+  }
+}
+
+.project-tittle {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-color);
+  margin-bottom: 4px;
+}
+
+.project-text {
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.about-project-item {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}

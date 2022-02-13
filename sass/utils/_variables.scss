@@ -1,0 +1,46 @@
+/** @format */
+
+:root {
+  --main-back-color: #e5e5e5;
+  --main-color: #212121;
+  --second-back-color: #2f303a;
+  --third-back-color: #f5f4fa;
+  --second-color: #2196f3;
+  --third-color: #757575;
+  --tittle-color: #ffffff;
+  --footer-color: rgba(255, 255, 255, 0.6);
+  --btn-shadow-color: rgba(0, 0, 0, 0.15);
+  --second-back-btn-color: #188ce8;
+  --header-border-color: #ececec;
+  --header-drop-shadow-color: rgba(0, 0, 0, 0.25);
+  --hero-background-image-color: rgba(47, 48, 58, 0.4);
+  --team-box-shadow-color-1: rgba(0, 0, 0, 0.12);
+  --team-box-shadow-color-2: rgba(0, 0, 0, 0.14);
+  --team-box-shadow-color-3: rgba(0, 0, 0, 0.2);
+  --client-link-border-color: #afb1b8;
+  --social-background-color: rgba(255, 255, 255, 0.1);
+  --social-background-box-shadow-color: rgba(0, 0, 0, 0.25);
+  --main-btn-box-shadow-color-1: rgba(0, 0, 0, 0.1);
+  --main-btn-box-shadow-color-2: rgba(0, 0, 0, 0.08);
+  --project-imege-text-background-color: rgba(33, 150, 243, 0.9);
+  --modal-background-color: rgba(255, 255, 255, 1);
+  --about-item-text-background-color: rgba(47, 48, 58, 0.8);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --input-text-color: rgba(117, 117, 117, 1);
+  --active-model-color: rgba(33, 150, 243, 1);
+  --modal-box-shadow-color-1: rgba(0, 0, 0, 0.2);
+  --modal-box-shadow-color-2: rgba(0, 0, 0, 0.14);
+  --modal-box-shadow-color-3: rgba(0, 0, 0, 0.12);
+  --modal-border-color: rgba(33, 33, 33, 0.2);
+  --footer-input-boder-color: rgba(255, 255, 255, 0.3);
+  --modal-input-text-color: rgba(0, 0, 0, 1);
+  --modal-form-text-color: rgba(117, 117, 117, 0.5);
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--third-color);
+}
