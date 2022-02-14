@@ -1,6 +1,8 @@
 /** @format */
 
 .backdrop {
+  max-width: 100%;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -16,13 +18,13 @@
 .modal {
   width: 100%;
   max-width: 450px;
-  min-height: 609px;
+  height: 609px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media screen and (min-width: 1200px) {
+  @include desk {
     width: 528px;
-    min-height: 581px;
+    height: 581px;
   }
   background-color: var(--modal-background-color);
   border-radius: 4px;
@@ -73,6 +75,7 @@
 }
 
 .modal-title {
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.15;
@@ -134,6 +137,7 @@
 }
 
 .form-policy {
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -160,8 +164,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   &::before {
     content: "";
     width: 16px;
