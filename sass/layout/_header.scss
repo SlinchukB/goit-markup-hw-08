@@ -18,8 +18,8 @@
 .contacts-list {
   padding-top: 21px;
   padding-bottom: 21px;
-  margin-left: 84px;
-  @media screen and (max-width: 768px) {
+  margin-left: auto;
+  @media screen and (max-width: 767px) {
     display: none;
   }
   @include desk {
@@ -47,7 +47,9 @@
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @include desk {
+    margin-right: 50px;
+  }
 }
 
 .contacts__item {
@@ -153,7 +155,7 @@
   width: 100vw;
   height: 100%;
   z-index: 1;
-  padding-top: 48px 40px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,7 +163,6 @@
 }
 
 .mob__site-list {
-  margin-top: 48px;
   color: var(--second-back-color);
 }
 
@@ -185,6 +186,10 @@
   outline: none;
   display: block;
   word-wrap: break-word;
+}
+
+.mob-contacts-list__link-item {
+  font-size: 24px;
 }
 
 .mob-contacts-list__link:hover,
@@ -214,22 +219,12 @@
   filter: drop-shadow(0px 4px 4px var(--header-drop-shadow-color));
 }
 
-.mob-list {
-  margin-left: 40px;
-}
-
 .mob-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
 .mob-contacts {
   margin-bottom: 64px;
-}
-
-.mob-social-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -10px;
 }
 
 .mob-social-list__item:not(:last-child) {
@@ -244,9 +239,13 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.04em;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
 .mob-social-list__item {
   margin-top: 10px;
-  margin-bottom: 48px;
+  margin-left: 10px;
 }

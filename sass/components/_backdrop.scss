@@ -176,6 +176,7 @@
     border-radius: 2px;
     margin-right: 7px;
     cursor: pointer;
+    flex-shrink: 0;
   }
 }
 
@@ -206,7 +207,7 @@
     position: absolute;
     background-color: var(--second-color);
     left: 0;
-    bottom: 5px;
+    bottom: -2px;
   }
 }
 

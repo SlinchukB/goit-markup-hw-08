@@ -37,52 +37,7 @@
   --modal-form-text-color: rgba(117, 117, 117, 0.5);
 }
 
-body {
-  font-family: "Roboto", "sans-serif";
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--third-color);
-}
-
 /** @format */
-:root {
-  --main-back-color: #e5e5e5;
-  --main-color: #212121;
-  --second-back-color: #2f303a;
-  --third-back-color: #f5f4fa;
-  --second-color: #2196f3;
-  --third-color: #757575;
-  --tittle-color: #ffffff;
-  --footer-color: rgba(255, 255, 255, 0.6);
-  --btn-shadow-color: rgba(0, 0, 0, 0.15);
-  --second-back-btn-color: #188ce8;
-  --header-border-color: #ececec;
-  --header-drop-shadow-color: rgba(0, 0, 0, 0.25);
-  --hero-background-image-color: rgba(47, 48, 58, 0.4);
-  --team-box-shadow-color-1: rgba(0, 0, 0, 0.12);
-  --team-box-shadow-color-2: rgba(0, 0, 0, 0.14);
-  --team-box-shadow-color-3: rgba(0, 0, 0, 0.2);
-  --client-link-border-color: #afb1b8;
-  --social-background-color: rgba(255, 255, 255, 0.1);
-  --social-background-box-shadow-color: rgba(0, 0, 0, 0.25);
-  --main-btn-box-shadow-color-1: rgba(0, 0, 0, 0.1);
-  --main-btn-box-shadow-color-2: rgba(0, 0, 0, 0.08);
-  --project-imege-text-background-color: rgba(33, 150, 243, 0.9);
-  --modal-background-color: rgba(255, 255, 255, 1);
-  --about-item-text-background-color: rgba(47, 48, 58, 0.8);
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --input-text-color: rgba(117, 117, 117, 1);
-  --active-model-color: rgba(33, 150, 243, 1);
-  --modal-box-shadow-color-1: rgba(0, 0, 0, 0.2);
-  --modal-box-shadow-color-2: rgba(0, 0, 0, 0.14);
-  --modal-box-shadow-color-3: rgba(0, 0, 0, 0.12);
-  --modal-border-color: rgba(33, 33, 33, 0.2);
-  --footer-input-boder-color: rgba(255, 255, 255, 0.3);
-  --modal-input-text-color: rgba(0, 0, 0, 1);
-  --modal-form-text-color: rgba(117, 117, 117, 0.5);
-}
-
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 14px;
@@ -484,6 +439,7 @@ img {
   border-radius: 2px;
   margin-right: 7px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .policy-check:hover + .check-text::before, .policy-check:focus + .check-text::before {
@@ -511,7 +467,7 @@ img {
   position: absolute;
   background-color: var(--second-color);
   left: 0;
-  bottom: 5px;
+  bottom: -2px;
 }
 
 .modal-btm {
@@ -537,9 +493,9 @@ img {
 .contacts-list {
   padding-top: 21px;
   padding-bottom: 21px;
-  margin-left: 84px;
+  margin-left: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .contacts-list {
     display: none;
   }
@@ -573,8 +529,10 @@ img {
   margin-right: 50px;
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts__item {
@@ -690,7 +648,7 @@ img {
   width: 100vw;
   height: 100%;
   z-index: 1;
-  padding-top: 48px 40px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -698,7 +656,6 @@ img {
 }
 
 .mob__site-list {
-  margin-top: 48px;
   color: var(--second-back-color);
 }
 
@@ -722,6 +679,10 @@ img {
   outline: none;
   display: block;
   word-wrap: break-word;
+}
+
+.mob-contacts-list__link-item {
+  font-size: 24px;
 }
 
 .mob-contacts-list__link:hover,
@@ -751,22 +712,12 @@ img {
   filter: drop-shadow(0px 4px 4px var(--header-drop-shadow-color));
 }
 
-.mob-list {
-  margin-left: 40px;
-}
-
 .mob-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
 .mob-contacts {
   margin-bottom: 64px;
-}
-
-.mob-social-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -10px;
 }
 
 .mob-social-list__item:not(:last-child) {
@@ -781,11 +732,15 @@ img {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.04em;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
 .mob-social-list__item {
   margin-top: 10px;
-  margin-bottom: 48px;
+  margin-left: 10px;
 }
 
 /** @format */
@@ -984,9 +939,11 @@ img {
 }
 
 /** @format */
+.client-list__item {
+  flex-basis: calc(100% / 2 - 30px);
+}
 @media screen and (min-width: 480px) {
   .client-list__item {
-    max-width: 450px;
     flex-basis: calc(100% / 2 - 30px);
   }
 }
@@ -1057,9 +1014,9 @@ img {
   margin-bottom: 9px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .cont-item:last-child {
-    margin-right: auto;
+    margin-left: auto;
   }
   .cont-item:not(:last-child) {
     margin-right: 70px;
@@ -1090,8 +1047,7 @@ img {
 @media screen and (min-width: 768px) {
   .footer-social-tab {
     display: flex;
-    align-items: center;
-    margin-bottom: 60px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1104,19 +1060,10 @@ img {
 .footer__cont-item {
   margin-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
-  .footer__cont-item {
-    margin-left: 76px;
-    margin-bottom: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer__cont-item {
-    margin-left: auto;
-    margin-bottom: auto;
-  }
-}
 
+.footer__cont-item:not(:last-child) {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 1200px) {
   .footer__cont-item:not(:last-child) {
     margin-right: 70px;
@@ -1189,7 +1136,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+  margin-left: -8px;
+  margin-top: -15px;
 }
 @media screen and (min-width: 768px) {
   .list-btn {
@@ -1198,12 +1147,10 @@ img {
 }
 
 .btm-item {
+  margin-left: 8px;
+  margin-top: 15px;
   max-width: 100%;
   margin-bottom: 15px;
-}
-
-.btn-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .main-btn {
@@ -1232,18 +1179,8 @@ img {
   box-shadow: 0px 3px 1px var(--main-btn-box-shadow-color-1), 0px 1px 2px var(--main-btn-box-shadow-color-2), 0px 2px 2px var(--team-box-shadow-color-1);
 }
 
-.project-item {
-  max-width: 100%;
-  max-height: 404px;
-}
-@media screen and (min-width: 480px) {
-  .project-item {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .project-item {
-    width: 354px;
     flex-basis: calc(100% / 2 - 30px);
   }
 }
@@ -1281,8 +1218,9 @@ img {
 }
 
 .project-link {
-  max-width: 100%;
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow var(--transition);
   outline: none;
 }
@@ -1309,8 +1247,10 @@ img {
 
 .about-project-item {
   max-width: 100%;
+  flex-grow: 1;
   padding-left: 24px;
   padding-top: 20px;
+  padding-right: 24px;
   padding-bottom: 20px;
   border: 1px solid #eeeeee;
   border-top: none;
