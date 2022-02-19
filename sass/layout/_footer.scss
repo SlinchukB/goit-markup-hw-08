@@ -64,24 +64,25 @@
 }
 
 .footer-social-tab {
+  margin-bottom: 60px;
   @include tab {
     display: flex;
     justify-content: center;
+    align-items: baseline;
   }
   @include desk {
     align-items: baseline;
-    margin-bottom: auto;
   }
-}
-
-.footer__cont-item {
-  margin-bottom: 60px;
 }
 
 .footer__cont-item:not(:last-child) {
   margin-bottom: 60px;
+  @include tab {
+    margin-bottom: 0;
+  }
   @include desk {
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 

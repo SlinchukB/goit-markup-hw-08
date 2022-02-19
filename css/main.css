@@ -752,7 +752,7 @@ img {
   background-image: linear-gradient(var(--hero-background-image-color), var(--hero-background-image-color)), url(../images/hero-bg-tel-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover, auto;
+  background-size: cover;
   margin: 0 auto;
 }
 @media screen and (min-width: 1200px) {
@@ -1044,29 +1044,34 @@ img {
   }
 }
 
+.footer-social-tab {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer-social-tab {
     display: flex;
     justify-content: center;
+    align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-social-tab {
     align-items: baseline;
-    margin-bottom: auto;
   }
-}
-
-.footer__cont-item {
-  margin-bottom: 60px;
 }
 
 .footer__cont-item:not(:last-child) {
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer__cont-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__cont-item:not(:last-child) {
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
